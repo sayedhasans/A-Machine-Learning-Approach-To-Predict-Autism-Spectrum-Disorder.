@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>ASD</title>
+<style type="text/css">
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 8px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  </style>
+</head>
+<body>
+    <form action = "/index" method="POST">
+        <h2>Welcome to Autism Spectrum Disorder evaluater</h2>
+        <h3>Fill the details below</h3>
+
+        <div class="container">
+        
+            <label for="cname">Name of the person</label>
+            <input type="text" id="cname" name="cname" placeholder="Enter name of the person ..">
+        
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" placeholder="Enter age..">
+
+            <label for="sex">Gender</label>
+            <select id="sex" name="sex" required>
+                <option value="">None</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        
+            <label for="bwj">Born with jaundice</label>
+            <select id="bwj" name="bwj" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="fads">Family member with ASD history</label>
+            <select id="fads" name="fads" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="testingperson">Who is completing the test</label>
+            <input type="text" id="testingperson" name="testingperson" placeholder="Enter testing person name..">
+        
+            <!-- <label for="sreason">Why are you taking the screening</label>
+            <textarea id="sreason" name="sreason" placeholder="Write something.." style="height:100px"></textarea> -->
+
+            <label for="aq1">I often notice small sounds when others do not</label>
+            <select id="aq1" name="aq1" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq2">I usually concentrate more on the whole picture, rather than the small details</label>
+            <select id="aq2" name="aq2" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq3">I find it easy to do more than one thing at once</label>
+            <select id="aq3" name="aq3" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq4">If there is an interruption, I can switch back to what I was doing very quickly</label>
+            <select id="aq4" name="aq4" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq5">I find it easy to 'read between the lines' when someone is talking to me</label>
+            <select id="aq5" name="aq5" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq6">I know how to tell if someone listening to me is getting bored</label>
+            <select id="aq6" name="aq6" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq7">When I'm reading a story I find it difficult to work out the characters' intentions</label>
+            <select id="aq7" name="aq7" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq8">I like to collect information about categories of things (e.g. types of car, types of bird, types of train, types of plant etc)</label>
+            <select id="aq8" name="aq8" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq9">I find it easy to work out what someone is thinking or feeling just by looking at their face</label>
+            <select id="aq9" name="aq9" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="aq10">I find it difficult to work out people's intentions</label>
+            <select id="aq10" name="aq10" required>
+                <option value="">None</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        
+            <input type="submit" value="Submit">
+        
+        </div>
+    </form>  
+</body>
+</html>
